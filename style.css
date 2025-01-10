@@ -8,3 +8,89 @@
     box-sizing: border-box;
     font-family: "Poppins", serif;
 }
+
+:root{
+    --primary-color: #1a1a1a;
+    --bg-color : #e3e6f3;
+    --primary-font-color: #1f1f1f;
+    --text-hover-color: #088178;
+}
+
+/* ------  Header Section  Start ---------- */
+
+#header{
+    width: 100vw;
+    height: 68px;
+    padding: 0 5%;   
+    background-color: var(--bg-color);
+    box-shadow: 0 0 25px var(--bg-color);
+
+}
+
+.header-container{
+    width: 100%;
+    height: 100%;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.navlinks{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0 10px;
+  
+}
+
+
+.navlinks li{
+    list-style-type: none;
+    padding: 0 10px;
+    position: relative;
+
+}
+
+.navlinks li a{
+
+    text-decoration: none;
+    color: var(--primary-font-color);
+    font-weight: 500;
+    font-size: 14px;
+    transition: .3s ease;
+
+}
+
+.navlinks li a:hover,.cart a:hover,.navlinks li a.active{
+    color: var(--text-hover-color);
+    
+    
+}
+
+
+.navlinks li .active::after,.navlinks li a:hover::after, .cart a:hover::after{
+    content: "";
+    width: 40%;
+    height: 2.5px;
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+    background-color: var(--text-hover-color);
+    
+}
+
+
+.cart a{
+    text-decoration: none;
+    color: var(--text-hover-color);
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 10px;
+    position: relative;
+    
+}
+
+/* ------------Header Responcive --------- */
